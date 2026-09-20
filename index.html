@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustafa Home Decor</title>
+  <meta name="description" content="Mustafa Home Decor — stylish decor for every corner of your home.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">MUSTAFA<span>HOME</span></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">Cart <b id="cartCount">0</b></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">MAKE YOUR SPACE BEAUTIFUL</p>
+        <h1>Beautiful details.<br><em>Beautiful home.</em></h1>
+        <p class="hero-text">Discover stylish, affordable home decor pieces made to give your space a fresh and elegant look.</p>
+        <a class="primary" href="#shop">Shop Collection →</a>
+      </div>
+      <div class="hero-art">
+        <div class="arch"></div>
+        <div class="plant"><i></i><i></i><i></i></div>
+        <div class="vase"></div>
+        <div class="table"></div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div><strong>COD</strong><span>Cash on Delivery</span></div>
+      <div><strong>7/7</strong><span>Order Support</span></div>
+      <div><strong>PK</strong><span>Delivery Across Pakistan</span></div>
+      <div><strong>✓</strong><span>Quality Checked</span></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-head">
+        <div><p class="eyebrow">SHOP BY STYLE</p><h2>Find your space</h2></div>
+      </div>
+      <div class="categories">
+        <a href="#shop" data-filter="Wall Decor"><span>🖼️</span><b>Wall Decor</b><small>Fresh walls</small></a>
+        <a href="#shop" data-filter="Lighting"><span>💡</span><b>Lighting</b><small>Warm glow</small></a>
+        <a href="#shop" data-filter="Decor"><span>🏺</span><b>Decor</b><small>Beautiful accents</small></a>
+        <a href="#shop" data-filter="Lifestyle"><span>🌿</span><b>Lifestyle</b><small>Everyday style</small></a>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head shop-head">
+        <div><p class="eyebrow">OUR COLLECTION</p><h2>Featured products</h2></div>
+        <div class="filters">
+          <button class="filter active" data-filter="All">All</button>
+          <button class="filter" data-filter="Wall Decor">Wall</button>
+          <button class="filter" data-filter="Lighting">Lighting</button>
+          <button class="filter" data-filter="Decor">Decor</button>
+          <button class="filter" data-filter="Lifestyle">Lifestyle</button>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="banner">
+      <div>
+        <p class="eyebrow">A LITTLE CHANGE GOES A LONG WAY</p>
+        <h2>Give your home<br>a new feeling.</h2>
+        <a class="light-btn" href="#shop">Explore Decor</a>
+      </div>
+    </section>
+
+    <section class="section why" id="about">
+      <div class="section-head"><div><p class="eyebrow">WHY MUSTAFA HOME DECOR</p><h2>Shop with confidence</h2></div></div>
+      <div class="why-grid">
+        <article><span>01</span><h3>Curated pieces</h3><p>We focus on products that can add a clean, stylish touch to everyday spaces.</p></article>
+        <article><span>02</span><h3>Easy ordering</h3><p>Choose your product, add it to the cart and place a simple COD order.</p></article>
+        <article><span>03</span><h3>Pakistan-wide</h3><p>We prepare the store for delivery to customers across Pakistan.</p></article>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <p class="eyebrow">STAY INSPIRED</p>
+      <h2>New decor. New mood.</h2>
+      <p>Follow us for new arrivals and special offers.</p>
+      <a class="primary" href="https://wa.me/923001234567" target="_blank">Chat on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="logo" href="#home">MUSTAFA<span>HOME</span></a><p>Simple pieces for beautiful spaces.</p></div>
+    <div><b>Quick links</b><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Why Us</a></div>
+    <div><b>Customer care</b><span>Cash on Delivery</span><span>Pakistan-wide delivery</span><span>WhatsApp support</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-top"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Your cart is empty.</p></div>
+    <div class="cart-bottom"><div><span>Total</span><strong id="cartTotal">Rs. 0</strong></div><button class="primary full" id="checkoutBtn">Checkout COD</button></div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <p class="eyebrow">CASH ON DELIVERY</p>
+      <h2>Place your order</h2>
+      <form id="orderForm">
+        <input required id="name" placeholder="Full name">
+        <input required id="phone" placeholder="Phone number">
+        <input required id="city" placeholder="City">
+        <textarea required id="address" placeholder="Complete delivery address"></textarea>
+        <p class="order-total">Order total: <b id="formTotal">Rs. 0</b></p>
+        <button class="primary full" type="submit">Place COD Order</button>
+      </form>
+      <p class="form-note">Demo store: connect this form to your preferred order/WhatsApp system before going live.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
